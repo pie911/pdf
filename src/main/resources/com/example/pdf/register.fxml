@@ -35,8 +35,8 @@
     <Button fx:id="registerButton" onAction="#onRegisterButtonClick" prefWidth="150.0" text="Register" AnchorPane.leftAnchor="230.0" AnchorPane.rightAnchor="230.0" AnchorPane.topAnchor="310.0" />
 
     <!-- Error Label (For Validation Messages) -->
-    <Label fx:id="errorLabel" style="-fx-font-size: 14px; -fx-font-weight: bold;" text="" textFill="red" AnchorPane.leftAnchor="150.0" AnchorPane.rightAnchor="150.0" AnchorPane.topAnchor="280.0" />
+    <Label fx:id="errorLabel" layoutX="190.0" layoutY="416.0" style="-fx-font-size: 14px; -fx-font-weight: bold;" text="" textFill="red" AnchorPane.leftAnchor="190.0" AnchorPane.rightAnchor="190.0" AnchorPane.topAnchor="416.0" />
 
     <!-- Login Hyperlink (Redirect to Login Page) -->
-    <Hyperlink fx:id="loginLink" layoutX="197.0" layoutY="361.0" onMouseClicked="#onLoginLinkClick" prefHeight="26.0" prefWidth="206.0" text="Already have an account? Login" AnchorPane.leftAnchor="197.0" AnchorPane.rightAnchor="197.0" AnchorPane.topAnchor="361.0" />
+    <Hyperlink fx:id="loginLink" onMouseClicked="#onLoginLinkClick" text="Already have an account? Login" AnchorPane.leftAnchor="197.0" AnchorPane.rightAnchor="197.0" AnchorPane.topAnchor="361.0" />
 </AnchorPane>

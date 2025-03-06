@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="com.example.pdf.Dashboard"
+            prefHeight="600.0" prefWidth="900.0"
+            stylesheets="@dashboard.css">
+
+    <!-- Left Sidebar -->
+    <VBox prefWidth="200" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0"
+          AnchorPane.bottomAnchor="0.0" spacing="15" alignment="CENTER"
+          style="-fx-background-color: #2c3e50; -fx-padding: 20px;">
+
+        <ImageView fx:id="profileImage" fitHeight="100" fitWidth="100"
+                   style="-fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.3), 10, 0, 0, 5);"/>
+
+        <Label fx:id="usernameLabel" text="User Name"
+               style="-fx-font-size: 18px; -fx-text-fill: white; -fx-font-weight: bold;"/>
+
+        <Button fx:id="btnUpload" text="📤 Upload File" onAction="#onUploadClick"/>
+        <Button fx:id="btnViewFiles" text="📂 View Files" onAction="#onViewFilesClick"/>
+        <Button fx:id="btnEditPDF" text="✏ Edit PDF" onAction="#onEditPDFClick"/>
+        <Button fx:id="btnLogout" text="🚪 Logout" onAction="#onLogoutClick"
+                style="-fx-background-color: #e74c3c; -fx-text-fill: white;"/>
+
+    </VBox>
+
+    <!-- Main Content Area -->
+    <AnchorPane AnchorPane.leftAnchor="200.0" AnchorPane.rightAnchor="0.0"
+                AnchorPane.topAnchor="0.0" AnchorPane.bottomAnchor="0.0">
+
+        <BorderPane fx:id="dragDropArea" prefWidth="700" prefHeight="600"
+                    style="-fx-background-color: #ecf0f1; -fx-border-color: #bdc3c7; -fx-border-width: 2px; -fx-padding: 20px;">
+
+            <center>
+                <TableView fx:id="recentFilesTable">
+                    <columns>
+                        <TableColumn fx:id="fileNameColumn" text="File Name" />
+                        <TableColumn fx:id="dateModifiedColumn" text="Date Modified" />
+                    </columns>
+                </TableView>
+            </center>
+        </BorderPane>
+    </AnchorPane>
+
+</AnchorPane>
